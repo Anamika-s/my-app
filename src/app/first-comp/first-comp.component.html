@@ -1,6 +1,18 @@
 <p>first-comp works!</p>
 This is forst component
 
+<div class="box1"> 100 </div>
+
+<div class="box1" [class.box2]="box2"> 200 </div>
+
+<div [ngClass]="'box1 box2 box3'"> 300 </div>
+
+<div [ngClass]="multiClasses"> 300 </div>
+
+<div [style.margin]="size"> 400 </div>
+
+<div [style.margin]="isActive? size : '5px'"> Div 1 </div>
+
 String Interpolation > Used for 1 way binding
 Data will come from ts to html
 <!-- {{}} -->
@@ -34,6 +46,8 @@ My app Status is {{appStatus? "Online": "Offline"}}
 
 
 <input type="text" [(ngModel)]="comment"/>
+
+
 
 
 

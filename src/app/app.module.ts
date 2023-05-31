@@ -9,6 +9,9 @@ import { FourthCompComponent } from './fourth-comp/fourth-comp.component';
 
 import { SixthCom } from 'src/sixth-comp';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { FormsModule } from '@angular/forms';
     SecondCompComponent,
     ThirdCompComponent,
     FourthCompComponent,
-    SixthCom
+    SixthCom,
+    HomeComponent,
+    AboutUsComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

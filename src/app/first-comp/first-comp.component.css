@@ -2,3 +2,22 @@ p
 {
     background-color: aqua;
 }
+
+.box1
+{
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+}
+
+.box2
+{
+    color: red;
+    border:2px solid red;
+}
+
+.box3
+{
+    font-size:xx-large;
+     
+}

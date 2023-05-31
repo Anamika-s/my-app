@@ -16,7 +16,14 @@ export class FirstCompComponent {
 
   // disabled : string="false";
   nghh : boolean =false;
-
+  box2:boolean = false;
+isActive = true;
+  size = "15px";
+  multiClasses={
+    box1:true,
+    box2:true,
+    box3:true
+  };
   appStatus:boolean= true;
 
   hello()

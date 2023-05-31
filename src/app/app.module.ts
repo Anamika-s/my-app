@@ -8,7 +8,7 @@ import { ThirdCompComponent } from './third-comp/third-comp.component';
 import { FourthCompComponent } from './fourth-comp/fourth-comp.component';
 
 import { SixthCom } from 'src/sixth-comp';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { SixthCom } from 'src/sixth-comp';
     SixthCom
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,39 @@
+<app-search (search)="SearchText($event)"> </app-search>
+<div>
+    <table class="table table-responsive  table-bordered table-striped">
+  <thead>
+    <tr>
+      <th> Student Id</th>
+      <th> Name </th>
+      <th>Gender </th>
+      <th> Age </th>
+      <th>Courses </th>
+      <th>DOB</th>
+      <th>Grade</th>
+      <th> Rating </th>
+    </tr>
+  </thead>
+  <tbody>
+     <tr *ngFor="let s of students;">
+      <td>{{s.studentID}}</td>  
+      <td>{{s.studentName | uppercase}}</td>  
+      <td>{{s.gender | lowercase}}</td>  
+      <td>{{s.age}}</td>  
+      <td>{{s.course}}</td>  
+      <td>{{s.DOB | date:'yMMMMd' | uppercase }}</td>  
+      <td>{{s.grade | percent:'.2'}}</td>  
+      <td>{{s.rating | number:'2.1-2'}}</td>  
+  </tr>
+  <tr *ngIf="!students || students.length==0">
+    <td colspan="8">
+      <b>  No records </b>
+    </td>
+  </tr> 
+
+  </tbody>
+</table>
+
+
+
+
+</div>

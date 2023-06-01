@@ -1,17 +1,34 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Course } from 'src/course';
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.css']
 })
+
 export class TestComponent {
+  
 // course=[];
   // course=[
   //   "ADCA",
   //   "DCST"
   // ];
-  courses=[
+  
+  /**
+   *
+   */
+
+  courses: Course[]=[];
+   
+  ngOnInit()
+  {
+    this.LoadCourses();
+  }
+  
+
+  LoadCourses() :void
+  {
+  this.courses= [
     {id:1, name:"CCA"},
     {id:2, name:"DCA"},
     {id:3, name:"BBA"},
@@ -19,7 +36,7 @@ export class TestComponent {
     {id:5, name:"PGDCA"},
     {id:6, name:"PGDA"}
   ]
-
+  }
   AddCourse()
   {
     this.courses.push({id:10, name:"DDDD"})

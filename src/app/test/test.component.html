@@ -98,6 +98,7 @@
     <tr *ngFor="let course of courses">
         <td> {{course.id}} </td>
         <td> {{course.name}}</td>
+        <td> <button (click) ='Delete(course.id)'> Delete </button></td>
     </tr>
  </table>
   </ng-template>
@@ -105,7 +106,7 @@
     <h1> There are no courses </h1>
   </ng-template>
 
-<button (click)="AddCourse()"> Add Course </button>"    
+<button (click)="AddCourse()"> Add Course </button>   
 
  
 

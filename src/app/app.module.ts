@@ -14,6 +14,10 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MyErrorDirective } from './my-error.directive';
 import { TestComponent } from './test/test.component';
+import { PipesdemoComponent } from './pipesdemo/pipesdemo.component';
+import { GenderPipe } from './gender.pipe';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { TestComponent } from './test/test.component';
     AboutUsComponent,
     ContactUsComponent,
     MyErrorDirective,
-    TestComponent
+    TestComponent,
+    PipesdemoComponent,
+    GenderPipe,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

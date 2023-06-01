@@ -24,5 +24,14 @@ export class TestComponent {
   {
     this.courses.push({id:10, name:"DDDD"})
   }
+  position: any;
+  Delete(courseid: number)
+  {
+   console.log("Delete")
+   console.log(courseid)
+   this.position =  this.courses.indexOf(this.courses[courseid]);
+   console.log(this.position)
+   this.courses.splice(this.position,1)
+  }
   viewMode="list";
 }

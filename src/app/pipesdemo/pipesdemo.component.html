@@ -1,0 +1,39 @@
+<!-- 
+{{'Welcome' | lowercase}}
+{{'Welcome' | uppercase}}
+
+{{todaydate | date:'d/m/y'}}
+
+<b>{{6589.23 | currency:"INR":false}}</b><br/>
+
+<b>{{6589.23 | currency:"USD":true}}</b> //Boolean true is used to get the sign of the currency. -->
+
+<div *ngIf="employees.length>0;then list;else nolist">
+
+</div>
+<ng-template #list>
+    <table>
+        <thead>  
+            <tr>  
+                <th>Code</th>  
+                <th>Name</th>  
+                <th>Gender</th>  
+                <th>Annual Salary</th>  
+                <th>Date of Birth</th>  
+            </tr>  
+        </thead>  
+        <tbody>  
+            <tr *ngFor="let employee of employees">
+                <td> {{employee.code | uppercase}} </td>
+                <td> {{employee.name | titlecase | gender:employee.gender}} </td>
+                <td> {{employee.gender}} </td>
+                <td> {{employee.annualSalary | currency:"INR"}} </td>
+                <td> {{employee.dateOfBirth}} </td>
+            </tr>
+
+    </table>
+</ng-template>
+
+<ng-template #nolist>
+
+    </ng-template>  

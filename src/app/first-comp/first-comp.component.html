@@ -1,6 +1,21 @@
 <p>first-comp works!</p>
 This is forst component
-
+<h1 appMyError>Hello {{name}}</h1>
+<ul class="nav nav-pills">
+    <li>
+        <a (click)="viewMode='map'"> Map </a> </li>
+        <li><a href="">List</a>   
+</ul>
+<div [ngSwitch] = "viewMode">
+    <div *ngSwitchCase="'map'">
+    Map View Content 
+  </div>
+  <div *ngSwitchCase="'list'">
+  List View Content 
+  </div>
+  <div *ngSwitchDefault> Otherwise </div>
+  </div>
+  
 <div class="box1"> 100 </div>
 
 <div class="box1" [class.box2]="box2"> 200 </div>

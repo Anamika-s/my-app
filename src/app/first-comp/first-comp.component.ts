@@ -13,7 +13,7 @@ export class FirstCompComponent {
   name:string="Deepak";
   number1: number = 10;
   number2: number = 20;
-
+viewMode='list';
   // disabled : string="false";
   nghh : boolean =false;
   box2:boolean = false;

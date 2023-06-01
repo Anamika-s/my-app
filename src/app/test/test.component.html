@@ -1,0 +1,111 @@
+<!-- <!-- 
+<div *ngIf="course.length>0">
+<h1> List of Courses </h1>
+<p> </p>
+<ul>
+    <li></li>
+    <li></li>
+</ul>
+</div> -->
+
+<!-- <div *ngIf="course.length>0">
+ {{course.length}}
+</div>
+
+<div *ngIf="course.length==0">
+    THere are nop courses
+</div> -->
+
+<!-- <div *ngIf="course.length>0;else noCourse">
+    {{course.length}}
+</div>
+
+<ng-template #noCourse>
+    There are no courses
+    </ng-template>    
+
+
+
+    <div *ngIf="course.length>0;then CourseList;else noCourse">
+        
+    </div>
+
+    <ng-template #CourseList>
+        {{course.length}}
+        <div>
+            <ul>
+                <li *ngFor="let cou of course">
+                     {{cou}}
+                </li>
+    
+            </ul>
+        </div>
+    </ng-template>
+    
+    <ng-template #noCourse>
+        There are no courses
+        </ng-template>  
+    
+    <div [hidden] = "course.length>0">
+            There are no courses
+    </div>
+
+    <div *ngIf="course.length>0">
+        <ul>
+            <li *ngFor="let cou of course;even as i">
+               {{i}}  {{cou}}
+            </li>
+
+        </ul>
+    </div>
+   
+
+  <b> Switch Case </b>
+
+  <ul class="nav nav-bar">
+  <li><a href="" (click)="viewMode='map'"> Map View </a> </li>
+    
+   <li> <a href=""   (click)="viewMode='list'"> List View</a></li>
+
+ <div [ngSwitch] ="viewMode">
+    <div *ngSwitchCase="'map'">
+        
+        Map View Content  
+      </div>
+      <div *ngSwitchCase="'list'">
+      
+      List View Content  
+      </div>
+      <div *ngSwitchDefault> Otherwise 
+
+      </div>
+      </div>
+      
+ 
+
+
+
+  </ul> -->
+
+ <div *ngIf="courses.length>0;then CourseList;else NoCourses">
+</div>
+ <ng-template #CourseList>
+ <table>
+    <tr> 
+    <th> ID </th>
+<th> Name </th>
+    </tr>
+    <tr *ngFor="let course of courses">
+        <td> {{course.id}} </td>
+        <td> {{course.name}}</td>
+    </tr>
+ </table>
+  </ng-template>
+  <ng-template #NoCourses>
+    <h1> There are no courses </h1>
+  </ng-template>
+
+<button (click)="AddCourse()"> Add Course </button>"    
+
+ 
+

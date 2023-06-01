@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { MyErrorDirective } from './my-error.directive';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     SixthCom,
     HomeComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    MyErrorDirective,
+    TestComponent
   ],
   imports: [
     BrowserModule,
